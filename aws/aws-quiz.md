@@ -190,3 +190,82 @@ Elastic IP addresses and allow all inbound HTTPS traffic.
 - [ ] bucketpolicy1 allows any user coming from the IP range of 68.249.108.0 to access objects in the userreports bucket and denies access to 68.249.108.128.
 - [ ] bucketpolicy1 allows any user to perform any action on the objects in the userreports bucket - except anyone coming from the IP of 68.249.108.128.
 - [x] bucketpolicy1 allows any user coming from the IP range of 68.249.108.0 to 68.249.108.255 to access objects in the userreports bucket-except anyone coming from the IP of 68.249.108.128.
+
+#### Q29. A new developer has been added to the team and you have been asked to provide access to the organization's AWS account. What is the best practice for granting access?
+- [ ] Do not give the new developer access to the AWS console.Using IAM user that is assigned to the development group, generate a new set of keys and label these with the name of the developer.
+- [ ] Create a IAM user for the new developer. Assign the new developerto a developer group you already created for the other developers.
+- [ ] Create a IAM user for the new developer.Manually assign policies to the new IAM user account.
+- [ ] Give the new developer the IAM login that is assigned to the development team. This IAM user should already include all of the policies that a developer would need.
+
+#### Q30. Which feature can de used to respond to a sudden increase in web traffic?
+- [ ] AWS Shield Advanced
+- [ ] RDS Read Replicas
+- [ ] EC2 Auto Scaling groups
+- [ ] all of these answer
+
+#### Q30. what does a VPC do?
+- [ ] Create a secure tunnel between two networs
+- [ ] Create a cloud-based network to interconnect a set of virtual servers and appliances
+- [ ] Create a private network that is completely isolated from the public internet
+- [ ] Create a shared storage plane for application data to be shared across multiple instances
+
+#### Q31. You have a UDP load balancer that is created by an instance that is running an NGINX proxy. Your application performance management (APM) solution can detect failures in your load balancer instance and transfer the Elastic IP to a passive standby instance. Using the AWS CLI, which script do you program into your APM to move the Elastic IP?
+- [ ] aws ec2 release-address --association-id eipassoc-2bebb 712                                                                                                            aws ec2 assign-address --instance-id i-8b953 --allocation-id eipalloc-02d021a
+- [ ] aws ec2 stop-instances --instance-ids i-8b953                                                                                                                 wait 30                                                                                                                                                              aws ec2 disassociate-address --association-id eipassoc-2bebb 712                                                                                                    aws ec2 associate-address --instance-id i-8b953 --allocation-id eipalloc-02d021a                                                                                      aws ec2 start-instances --instance-ids i-8b953
+- [ ] aws ec2 disassociate-address --association-id eipassoc-2bebb712                                                                                                    aws ec2 associate-address --instance-id i-8b953 --allocation-id eipalloc-02d021a
+- [ ] aws ec2 release-address--association-id eipassoc-2bebb712                                                                                                           aws ec2 associate-address --instance-id i-8b953 --allocation-id eipalloc-02d021a
+
+#### Q32. You have a VPC that has a public and private subnet. There is a NAT gateway in the public subnet that allows instances in the private subnet to access the internet without having public exposure outside of the VPC. What should the routing tables be for the private subnet? (*******image missing*****)
+- [ ] Destination 1: 10.0.0.0/16, Target 1: local;                                                                                                                 Destination 2: 0.0.0.0/0, Target 2: nat-09b4832
+- [ ] Destination 1: 10.0.0.0/24, Target 1: local;                                                                                                                    Destination 2: 0.0.0.0/0, Target 2: igw-b2ff47d6
+- [ ] Destination 1: 10.0.0.0/16, Target 1: vpc-12bd09ac2;                                                                                                           Destination 2: 0.0.0.0/0, Target 2: igw-b2ff47d6
+- [ ] Destination 1: 10.0.0.0/24, Target 1: subnet-1948ba2;                                                                                                        Destination 2: 0.0.0.0/0, Target 2: nat-09b4832
+
+#### Q33. What does this small section of a CloudFormation template do?
+```
+      Type: AWS::EC2::FlowLog
+      Properties:
+                DeliverLogs PermissionArn: !GetAtt IamRole.Arn
+                LogGroupName: FlowLogsGroup
+                ResourceId: ! Ref LogVpcid
+                Resource Type: VPC
+                TrafficType: ALL
+```
+- [ ] It logs all of the network traffic within a VPC except Instance IDs defined by LogVpcID and logs it to the CloudWatch FlowLogsGroup log group.
+- [ ] It logs all the network traffic going to and from a single EC2 instance into the CloudWatch FlowLogsGroup log group. You could use this to inspect suspicious network traffic coming into an EC2 instance.
+- [ ] It writes the VPC network flow logs to the CloudWatch FlowLogsGroup log group. You could use this to inspect the network connections of your VPC.
+- [ ] It logs all of the DNS requests made by resources within a VPC and logs them to the CloudWatch FlowLogsGroup. Use this to diagnose DNS lookup errors within your environment.
+
+#### Q34. Your company has on-premise servers with an existing onsite backup solution that also replicates backups to another campus on the other side of the country with its own on-site backup solution. You have been asked to create a third level of redundancy by also storing these backups in the cloud. In the event of a primary and secondary backup failure, your boss wants to know that the cloud backups can be accessible fast as possible to reduce downtime during the recovery. What S3 storage class do you recommend for cost and performance?
+- [ ] S3 One Zone-Infrequent Access
+- [ ] S3 Standard
+- [ ] S3 Intelligent-Tiering
+- [ ] S3 Glacier
+
+#### Q35. What does the following AWS CLI create-service command for ECS do?
+```
+aws ecs create-service
+  --cluster production
+  --service-name rest-api
+  --task-definition rest-api:1
+  --desired-count 2
+  --launch-type "FARGATE" \
+  --network-configuration
+  "awsvpcConfiguration={subnets=[subnet-0b29129ab], securityGroups=[sg-Ob29129ab] }"
+```
+- [ ] changes the security groups of the running rest-api task
+- [ ] launches two containers onto Fargate into the existing production cluster using the rest-api task definition
+- [ ] creates a service definition for the rest-api task; puts two containers on the production cluster when launched with the ecs-cli up command
+- [ ] creates a cluster called production and launches two containers onto Fargate with the rest-api task definition
+
+#### Q36. You have 14 on-premise web servers, 4 database servers, 6 servers running GIS software, 3 file servers, and 4 development servers. What considerations should you take into account when migrating these servers into AWS?
+- [ ] The only way to transfer large amounts of database data up to AWS is via S3, which can have a slow upload speed. Plan for this delay and cost in your migration plan.
+- [ ] AWS does not have a way to seperate billing for compute costs, so you will need to design a way to split the budget between departments.
+- [ ] New AWS accounts are limited to 20 on-demand EC2 instances. Submit a request to increase your rate limits before starting a migration
+- [ ] Software licensing costs are always included in services such as RDS, so factor the loss of use of your on-premise licenses into your budget
+
+#### Q37. Your application is sending 50,000 emails through SES each day. Since you must maintain a low bounce rate to avoid being put on probation, what simple system do you architect to automatically process hard bounces?
+- [ ] Configure SES to no longer send to email addresses that are on your bounce list.
+- [ ] Configure SES to send all bounce events to an SNS topic. Create a Lambda function that processes each hard bounce event and automatically flags that account as a bounce in your application to prevent further sending attempts.
+- [ ] Send all email through SES with a custom reply-to header. Configure SES to listen for events on this email address and flag any email address that replies to this account as a bounced message and remove it from your email list.
+- [ ] Configure SES to send the logs of all delivery attempts through Kinesis Firehose. Process each event and look for bounce types and remove these emails from your list.
