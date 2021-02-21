@@ -251,3 +251,33 @@
  - [ ] short
  - [ ] medium
  - [x] a single bit
+
+#### Q44. You need to select a columnstore database that can enforce built-in data types. You want to add indexes to improve query performance for known workloads. Which do you choose?
+- [ ] HBase
+- [ ] Redis
+- [ ] Bigtable
+- [ ] Cassandra
+
+#### Q45. Which statement retrieves an item from the MusicCollection table in DynamoDB?
+- [ ] aws dynamodb query --table-name MusicCollection --key file://key.json
+- [ ] aws dynamodb get-item --table-name MusicCollection --key file://key.json
+- [ ] aws dynamodb select --table-name MusicCollection --key file://key.json
+- [ ] aws dynamodb put-item --table-name MusicCollection --key file://key.json
+
+#### Q46. You need to create a scalable database to store and query JSON data. What do you use?
+- [ ] a relational database
+- [ ] a graph database
+- [ ] a ledger database
+- [x] a document database
+
+#### Q47. You need to store an unordered collection of name-value pairs with differing data types in DynamoDB. Which data type should you choose?
+- [x] map [reference](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/HowItWorks.NamingRulesDataTypes.html)
+- [ ] list
+- [ ] stack
+- [ ] set
+
+#### Q48. Which is NOT a type of NoSQL database?
+- [ ] graph
+- [ ] document
+- [x] relational [reference] (https://www.mongodb.com/scale/types-of-nosql-databases)
+- [ ] key-value
