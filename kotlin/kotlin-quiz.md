@@ -105,7 +105,8 @@ val task = launch {
 
 - [ ] You must wrap all implicit conversion in a try/catch block
 - [ ] You can only assign Long to an Int, not the other way around
-- [ ] There is no implicit conversion from Int to Long
+- [x] There is no implicit conversion from Int to Long
+[reference](https://beginnersbook.com/2018/09/kotlin-type-conversion/)
 - [ ] All integers in Kotlin are of type Long
 
 #### Q11. You have written a snippet of code to display the results of the roll of a six-sided die. When the die displays from 3 to 6 inclusive, you want to display a special message. Using a Kotlin range, what code should you add?
@@ -245,7 +246,7 @@ class Manager : Employee()
 
 - [ ] `change()`
 - [ ] `modify()`
-- [ ] `set()`
+- [x] `set()`
 - [ ] `assign()`
 
 #### Q24. From the Supervisor subclass, how do you call the Employee class's display() method?
@@ -303,7 +304,7 @@ val seq = sequence { yieldAll(1..20) }
 class Person
 ```
 
-- [ ] `equals(), hashCode(), and toString()`
+- [x] `equals(), hashCode(), and toString()`
 - [ ] `equals(), toHash(), and super()`
 - [ ] `print(), println(), and toString()`
 - [ ] `clone(), equals(), and super()`
@@ -324,7 +325,7 @@ abstract class Person(val name: String){
 ```
 
 - [ ] The subclass must be marked sealed
-- [ ] You must override the displayJob() method
+- [x] You must override the displayJob() method
 - [ ] You must mark the subclass as final
 - [ ] An abstract class cannot be extended, so you must change it to open
 
@@ -340,7 +341,8 @@ class UserService{
 }
 ```
 
-- [ ] Use import as to change the type name
+- [x] Use import as to change the type name
+[reference](http://kotlin-quick-reference.com/95-R-imports-packages.html)
 - [ ] Create subtypes with shorter names
 - [ ] Create interfaces with shorter names
 - [ ] Create extension classes with shorter names
