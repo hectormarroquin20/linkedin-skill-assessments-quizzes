@@ -517,3 +517,96 @@ class Cow {
         }
 }
 ```
+
+
+#### Q35. Which is not a predefined variable that you might use in PHP page?
+
+- [ ] $_POST
+- [ ] $_REQUEST
+- [x] $_RESPONSE
+- [ ] $_COOKIE
+
+#### Q36. Which PHP script finds the earliest and lastest dates from array?
+
+- [ ]
+
+```
+<?php
+$dates = array('2018-02-01','2017-02-02','2015-02-03'); 
+echo "Latest Date: " max($dates)."\n";
+echo "Earliest Date: " min($dates)."\n";
+?>
+```
+
+- [ ]
+
+```
+<?php
+$dates = array('2018-02-01','2017-02-02','2015-02-03'); 
+echo "Latest Date: " min($dates)."\n";
+echo "Earliest Date: " max              ($dates)."\n";
+?>
+```
+
+- [ ]
+
+```
+<?php
+$dates = array('2018-02-01','2017-02-02','2015-02-03'); 
+echo "Latest Date: ".max($dates)."\n";
+echo "Earliest Date: ".min($dates)."\n";
+?>
+```
+
+- [ ]
+
+```
+<?php
+$dates = array('2018-02-01','2017-02-02','2015-02-03'); 
+echo "Latest Date: ".($dates)."\n";
+echo "Earliest Date: ".($dates)."\n";
+?>
+```
+
+#### Q37. Which PHP program decapitalizes the first letter of string to produce the output lincoln?
+
+- [ ]
+
+```
+function decapitalize($string, $upperRest=true)
+{
+        return lcfirst($upperRest ? strtoupper($string) : $string);
+}
+print_r(decapitalize('Lincoln'));
+```
+
+- [ ]
+
+```
+function decapitalize($string, $upperRest=false)
+{
+        return lcfirst($upperRest ? strtoupper($string) : $string);
+}
+print_r(decapitalize('Lincoln'));
+```
+
+- [x]
+
+```
+function decapitalize($string)
+{
+        return strtolower(substring($string, 0, 1)).$string;
+}
+print_r(decapitalize('Lincoln'));
+```
+
+- [ ]
+
+```
+function decapitalize($string, $upperRest=false)
+{
+        return lcfirst($upperRest ? strtoupper(string) : $string);
+}
+print_r(decapitalize('Lincoln'));
+```
+
