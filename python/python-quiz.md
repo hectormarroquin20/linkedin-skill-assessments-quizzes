@@ -706,3 +706,15 @@ def calculate_sales_tax(subtotal):
 - [ ] a generic object class with non-iterable named fields
 - [ ] a generic object class with iterable parameter fields
 - [ ] a tuple subclass with non-iterable parameter fields
+
+#### Q69. Which statement accurately describe how items are added to and removed from a stack?
+- [ ] A stacks add item to one side and removes items from other side.
+- [ ] A stacks add item to the top  and removes items from the top.
+- [ ] A stacks add item to the top and removes items from anywhere in the stack.
+- [ ] A stacks add item to either end and removes items from either end.
+
+#### Q70. What is a base case in a recursive function?
+- [ ] A base case is the condition that allows the algorithm to stop recursing. It is usually a problem that is small enough to solved directly.
+- [ ] The base case is the summary of the overall problem that needs to solved.
+- [ ] The base case is passed in as an argument to a function whose body makes use of recursion.
+- [ ] The base case is similar to a base class, in that it can be inherited by another object.
